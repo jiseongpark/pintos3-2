@@ -1,4 +1,2 @@
 Prototype mismatch: sub main::SIGVTALRM () vs none at /home/20150347/pintos/src/utils/pintos line 874.
 Constant subroutine SIGVTALRM redefined at /home/20150347/pintos/src/utils/pintos line 866.
-Use of uninitialized value in numeric le (<=) at /home/20150347/pintos/src/utils/pintos line 769.
-qemu: terminating on signal 2 from pid 708

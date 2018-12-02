@@ -1,7 +1,8 @@
-Copying tests/userprog/bad-write2 into /tmp/1EQwj40Kq8.dsk...
-Writing command line to /tmp/Ra6XjaKO1p.dsk...
-qemu -hda /tmp/Ra6XjaKO1p.dsk -hdb /tmp/ueIFfrS5bW.dsk -hdc /tmp/1EQwj40Kq8.dsk -hdd /tmp/MIVhcJj9jZ.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/bad-write2 into /tmp/thcPymeVxQ.dsk...
+Writing command line to /tmp/X5mo3fNh13.dsk...
+qemu -hda /tmp/X5mo3fNh13.dsk -hdb /tmp/3TIrKr2Zje.dsk -hdc /tmp/thcPymeVxQ.dsk -hdd /tmp/Nvs4n41AYT.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put bad-write2 run bad-write2
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -17,13 +18,13 @@ Executing 'bad-write2':
 (bad-write2) begin
 bad-write2: exit(-1)
 Execution of 'bad-write2' complete.
-Timer: 63 ticks
-Thread: 3 idle ticks, 59 kernel ticks, 1 user ticks
+Timer: 61 ticks
+Thread: 5 idle ticks, 56 kernel ticks, 0 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 76 reads, 216 writes
 hd1:0: 104 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 896 characters output
+Console: 907 characters output
 Keyboard: 0 keys pressed
 Exception: 6 page faults
 Powering off...

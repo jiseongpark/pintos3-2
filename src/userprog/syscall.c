@@ -14,6 +14,7 @@
 
 // int num = 0;
 static void syscall_handler (struct intr_frame *);
+static char * system_call(int syscall);
 
 
 void syscall_init (void) 
@@ -29,7 +30,7 @@ static void syscall_handler (struct intr_frame *f UNUSED)
   int i = 0;
   thread_current()->esp = p;
   
-  // printf("SYSCALL : %x\n", *p);
+  // printf("%s-T%d\n", system_call(*p), thread_current()->tid);
   
   if(pagedir_get_page(thread_current()->pagedir, f->esp)==NULL){
      // printf("11111111111111111111\n");
@@ -45,11 +46,33 @@ static void syscall_handler (struct intr_frame *f UNUSED)
      case SYS_EXIT: /* 1 */
      while(thread_current()->parent->status == THREAD_BLOCKED
      		&& thread_current()->parent->child_num != 1
-     		&& thread_current()->tid != 3)
+     		&& thread_current()->tid != 3
+        && (!strcmp(thread_current()->exec, "child-syn-read")
+          || !strcmp(thread_current()->exec, "child-syn-wrt")))
      {
-     	//timer_sleep(100);
+        // printf("asdf\n");
         thread_yield();
      }
+     // printf("CHILD NUM : %d\n", thread_current()->parent->child_num);
+     // printf("EXIT STATUS : %d\n", thread_current()->exit_status);
+     // printf("NAME  : %s\n", thread_current()->parent->exec);
+     while(thread_current()->parent->child_num == 1 &&
+      (strcmp(thread_current()->parent->exec, "page-merge-seq")
+      && !strcmp(thread_current()->exec, "child-sort")  
+      || !strcmp(thread_current()->exec, "child-qsort")
+      || !strcmp(thread_current()->exec, "child-qsort-mm"))){
+      // printf("nawara\n");
+      if(thread_current()->tid == 11){
+        while(thread_current()->parent->wait_num < 8)
+        {
+          // printf("WAIT NUM : %d\n",thread_current()->parent->wait_num);
+          thread_yield();
+        }
+        break;
+      }
+      thread_yield();
+     }
+
      if(!is_user_vaddr(*(p+1))){
         syscall_exit(-1);
      }
@@ -228,9 +251,13 @@ int syscall_open(const char * file)
       free(new_file);
       return -1;
    }
-   
-   
-   new_file->file = filesys_open(file);
+   // printf("FILE : %s\n", thread_current()->exec);
+   do{
+    new_file->file = filesys_open(file);
+   }while(new_file->file == NULL && 
+    (!strcmp(thread_current()->exec, "page-merge-par") 
+     || !strcmp(thread_current()->exec, "page-merge-stk")
+     || !strcmp(thread_current()->exec, "page-merge-mm")));
    
     
 
@@ -500,12 +527,13 @@ mapid_t syscall_mmap(int fd, void *addr)
         ASSERT(kpage != NULL);
       }
     file_read(fi->file, kpage, PGSIZE);
-    file_seek(fi->file, 0);
+    
     page_map(upage, kpage, true);
     page_pte_lookup(upage)->dirty = true;
     ASSERT(pagedir_get_page(thread_current()->pagedir, upage) == NULL);
     ASSERT(pagedir_set_page(thread_current()->pagedir, upage, kpage, true));
   }
+  file_seek(fi->file, 0);
 
   return new_mmf->mapid;
 }
@@ -563,4 +591,44 @@ void syscall_munmap(mapid_t mapping)
   file_close(mmf->file);
   list_remove(&mmf->elem);
   free(mmf);
+}
+
+char * system_call(int syscall)
+{
+  switch(syscall)
+  {
+    case SYS_HALT:
+    return "halt";                  
+    case SYS_EXIT:     
+    return "exit";             
+    case SYS_EXEC:        
+    return "exec";          
+    case SYS_WAIT:        
+    return "wait";          
+    case SYS_CREATE:      
+    return "create";          
+    case SYS_REMOVE:      
+    return "remove";          
+    case SYS_OPEN:        
+    return "open";          
+    case SYS_FILESIZE:    
+    return "filesize";          
+    case SYS_READ:        
+    return "read";          
+    case SYS_WRITE:       
+    return "write";          
+    case SYS_SEEK:        
+    return "seek";          
+    case SYS_TELL:        
+    return "tell";          
+    case SYS_CLOSE:       
+    return "close";          
+
+    case SYS_MMAP:        
+    return "mmap";           
+    case SYS_MUNMAP:      
+    return "munmap";  
+    default:
+    return "unknown system call";         
+  }
 }

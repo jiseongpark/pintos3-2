@@ -1,0 +1,39 @@
+Copying tests/filesys/extended/grow-seq-sm into /tmp/3bhT_seM8i.dsk...
+Copying tests/filesys/extended/tar into /tmp/3bhT_seM8i.dsk...
+Writing command line to /tmp/UQ3TGpSfoq.dsk...
+qemu -hda /tmp/UQ3TGpSfoq.dsk -hdb tmp.dsk -hdc /tmp/3bhT_seM8i.dsk -hdd /tmp/jg87JxG0Vi.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put grow-seq-sm put tar run grow-seq-sm
+0xc002f000
+Pintos booting with 4,088 kB RAM...
+368 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  471,040,000 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 226 sector (113 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'grow-seq-sm' into the file system...
+Putting 'tar' into the file system...
+Executing 'grow-seq-sm':
+(grow-seq-sm) begin
+(grow-seq-sm) create "testme"
+(grow-seq-sm) open "testme"
+(grow-seq-sm) writing "testme"
+(grow-seq-sm) close "testme"
+(grow-seq-sm) open "testme" for verification
+(grow-seq-sm) size of testme (0) differs from expected (5678)
+(grow-seq-sm) read of 512 bytes at offset 0 in "testme" returned 0: FAILED
+grow-seq-sm: exit(1)
+Execution of 'grow-seq-sm' complete.
+Timer: 71 ticks
+Thread: 9 idle ticks, 60 kernel ticks, 2 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 496 reads, 460 writes
+hd1:0: 226 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1261 characters output
+Keyboard: 0 keys pressed
+Exception: 6 page faults
+Powering off...

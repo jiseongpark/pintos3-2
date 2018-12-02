@@ -1,7 +1,8 @@
-Copying tests/vm/mmap-bad-fd into /tmp/_dThozoqWD.dsk...
-Writing command line to /tmp/fHEjdc5BGX.dsk...
-qemu -hda /tmp/fHEjdc5BGX.dsk -hdb /tmp/8bzUcWvBmb.dsk -hdc /tmp/_dThozoqWD.dsk -hdd /tmp/ZP2yRI6IYu.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/mmap-bad-fd into /tmp/BWUC5Il5Ub.dsk...
+Writing command line to /tmp/97y_BRn7Nu.dsk...
+qemu -hda /tmp/97y_BRn7Nu.dsk -hdb /tmp/ZEMXHF_U2W.dsk -hdc /tmp/BWUC5Il5Ub.dsk -hdd /tmp/yiGOMWtJrT.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put mmap-bad-fd run mmap-bad-fd
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -18,13 +19,13 @@ Executing 'mmap-bad-fd':
 (mmap-bad-fd) try to mmap invalid fd
 mmap-bad-fd: exit(-1)
 Execution of 'mmap-bad-fd' complete.
-Timer: 57 ticks
-Thread: 3 idle ticks, 53 kernel ticks, 1 user ticks
+Timer: 58 ticks
+Thread: 2 idle ticks, 55 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 76 reads, 216 writes
 hd1:0: 104 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 940 characters output
+Console: 951 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

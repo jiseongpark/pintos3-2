@@ -1,8 +1,9 @@
-Copying tests/vm/page-merge-mm into /tmp/8_rJiryVPs.dsk...
-Copying tests/vm/child-qsort-mm into /tmp/8_rJiryVPs.dsk...
-Writing command line to /tmp/xWkYw5ZgKe.dsk...
-qemu -hda /tmp/xWkYw5ZgKe.dsk -hdb /tmp/kEncEAj5w4.dsk -hdc /tmp/8_rJiryVPs.dsk -hdd /tmp/UnHiH7OdBB.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/page-merge-mm into /tmp/rDsg4ylcnQ.dsk...
+Copying tests/vm/child-qsort-mm into /tmp/rDsg4ylcnQ.dsk...
+Writing command line to /tmp/TiEFrJmB9y.dsk...
+qemu -hda /tmp/TiEFrJmB9y.dsk -hdb /tmp/GVwGSTA2zk.dsk -hdc /tmp/rDsg4ylcnQ.dsk -hdd /tmp/V2IMMjzhFn.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put page-merge-mm put child-qsort-mm run page-merge-mm
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -21,5 +22,40 @@ Executing 'page-merge-mm':
 (page-merge-mm) sort chunk 0
 (page-merge-mm) sort chunk 1
 child-qsort-mm: exit(80)
-
-TIMEOUT after 61 seconds of wall-clock time - load average: 0.10, 0.22, 0.14
+(page-merge-mm) sort chunk 2
+child-qsort-mm: exit(80)
+(page-merge-mm) sort chunk 3
+child-qsort-mm: exit(80)
+(page-merge-mm) sort chunk 4
+child-qsort-mm: exit(80)
+(page-merge-mm) sort chunk 5
+child-qsort-mm: exit(80)
+(page-merge-mm) sort chunk 6
+child-qsort-mm: exit(80)
+(page-merge-mm) sort chunk 7
+child-qsort-mm: exit(80)
+(page-merge-mm) wait for child 0
+(page-merge-mm) wait for child 1
+(page-merge-mm) wait for child 2
+(page-merge-mm) wait for child 3
+(page-merge-mm) wait for child 4
+(page-merge-mm) wait for child 5
+(page-merge-mm) wait for child 6
+(page-merge-mm) wait for child 7
+child-qsort-mm: exit(80)
+(page-merge-mm) merge
+(page-merge-mm) verify
+(page-merge-mm) success, buf_idx=1,048,576
+(page-merge-mm) end
+page-merge-mm: exit(0)
+Execution of 'page-merge-mm' complete.
+Timer: 271 ticks
+Thread: 54 idle ticks, 55 kernel ticks, 162 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 4977 reads, 6636 writes
+hd1:0: 225 reads, 0 writes
+hd1:1: 456 reads, 1624 writes
+Console: 1833 characters output
+Keyboard: 0 keys pressed
+Exception: 606 page faults
+Powering off...

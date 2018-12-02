@@ -7,6 +7,7 @@
 #include "filesys/inode.h"
 #include "filesys/directory.h"
 #include "devices/disk.h"
+#include "filesys/cache.h"
 
 /* The disk that contains the file system. */
 struct disk *filesys_disk;
@@ -21,14 +22,18 @@ filesys_init (bool format)
   filesys_disk = disk_get (0, 1);
   if (filesys_disk == NULL)
     PANIC ("hd0:1 (hdb) not present, file system initialization failed");
-
+  
+  buffer_cache_init();
   inode_init ();
   free_map_init ();
+  
 
-  if (format) 
+  if (format){
     do_format ();
 
+  }
   free_map_open ();
+
 }
 
 /* Shuts down the file system module, writing any unwritten data
@@ -36,6 +41,7 @@ filesys_init (bool format)
 void
 filesys_done (void) 
 {
+  buffer_cache_flush_all();
   free_map_close ();
 }
 
@@ -46,12 +52,15 @@ filesys_done (void)
 bool
 filesys_create (const char *name, off_t initial_size) 
 {
+  
   disk_sector_t inode_sector = 0;
+
   struct dir *dir = dir_open_root ();
   bool success = (dir != NULL
                   && free_map_allocate (1, &inode_sector)
                   && inode_create (inode_sector, initial_size)
                   && dir_add (dir, name, inode_sector));
+
   if (!success && inode_sector != 0) 
     free_map_release (inode_sector, 1);
   dir_close (dir);

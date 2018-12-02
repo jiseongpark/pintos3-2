@@ -48,12 +48,12 @@ sort_chunks (const char *subprocess, int exit_status)
       int handle;
 
       msg ("sort chunk %zu", i);
-
+      
       /* Write this chunk to a file. */
       snprintf (fn, sizeof fn, "buf%zu", i);
-
       create (fn, CHUNK_SIZE);
       quiet = true;
+
       CHECK ((handle = open (fn)) > 1, "open \"%s\"", fn);
       write (handle, buf1 + CHUNK_SIZE * i, CHUNK_SIZE);
 
@@ -61,9 +61,9 @@ sort_chunks (const char *subprocess, int exit_status)
       
       /* Sort with subprocess. */
       snprintf (cmd, sizeof cmd, "%s %s", subprocess, fn);
-      
+
       CHECK ((children[i] = exec (cmd)) != -1, "exec \"%s\"", cmd);
-      // printf("HERE PASS\n");
+      
       quiet = false;
 
     }

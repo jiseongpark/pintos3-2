@@ -85,15 +85,16 @@ typedef int tid_t;
    blocked state is on a semaphore wait list. */
 struct thread
   {
-    /* Owned by thread.c. */
-    tid_t tid;                          /* Thread identifier. */
-    enum thread_status status;          /* Thread state. */
-    char name[16];                      /* Name (for debugging purposes). */
-    uint8_t *stack;                     /* Saved stack pointer. */
-    int priority;                       /* Priority. */
-
     /* Shared between thread.c and synch.c. */
     struct list_elem elem;              /* List element. */
+
+    /* Owned by thread.c. */
+    uint8_t *stack;                     /* Saved stack pointer. */
+    enum thread_status status;          /* Thread state. */
+    tid_t tid;                          /* Thread identifier. */
+    char name[16];                      /* Name (for debugging purposes). */
+    
+    int priority;                       /* Priority. */
 
 #ifdef USERPROG
     /* Owned by userprog/process.c. */
@@ -108,6 +109,7 @@ struct thread
     int executable;                     /* flag for executable file */
     char* exec;                         /*execuatable file for load */ 
     uint32_t* stack_end;
+    int wait_num;
 #endif
 
     /* Owned by thread.c. */

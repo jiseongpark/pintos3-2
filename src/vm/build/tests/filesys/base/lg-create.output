@@ -1,11 +1,12 @@
-Copying tests/filesys/base/lg-create into /tmp/c9d3FvOvUN.dsk...
-Writing command line to /tmp/3kzsPUnQnj.dsk...
-qemu -hda /tmp/3kzsPUnQnj.dsk -hdb /tmp/0ZAE0iy9qp.dsk -hdc /tmp/c9d3FvOvUN.dsk -hdd /tmp/c02U0UmAYc.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/base/lg-create into /tmp/IxULiresSs.dsk...
+Writing command line to /tmp/H9mv44Htlr.dsk...
+qemu -hda /tmp/H9mv44Htlr.dsk -hdb /tmp/x9J3GApWqb.dsk -hdc /tmp/IxULiresSs.dsk -hdd /tmp/LQfI45hEtA.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put lg-create run lg-create
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
-Calibrating timer...  422,707,200 loops/s.
+Calibrating timer...  471,040,000 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 107 sector (53 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -22,13 +23,13 @@ Executing 'lg-create':
 (lg-create) end
 lg-create: exit(0)
 Execution of 'lg-create' complete.
-Timer: 71 ticks
-Thread: 8 idle ticks, 61 kernel ticks, 2 user ticks
+Timer: 66 ticks
+Thread: 8 idle ticks, 57 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 251 reads, 374 writes
 hd1:0: 107 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1049 characters output
+Console: 1060 characters output
 Keyboard: 0 keys pressed
 Exception: 23 page faults
 Powering off...

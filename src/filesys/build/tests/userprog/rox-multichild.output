@@ -1,0 +1,67 @@
+Copying tests/userprog/rox-multichild into /tmp/pybhwyVf5D.dsk...
+Copying tests/userprog/child-rox into /tmp/pybhwyVf5D.dsk...
+Writing command line to /tmp/5_tJPGeMlU.dsk...
+qemu -hda /tmp/5_tJPGeMlU.dsk -hdb /tmp/ONBvjuUjH6.dsk -hdc /tmp/pybhwyVf5D.dsk -hdd /tmp/FGrEJP1xZ1.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put rox-multichild put child-rox run rox-multichild
+0xc002f000
+Pintos booting with 4,088 kB RAM...
+368 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  419,020,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 222 sector (111 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'rox-multichild' into the file system...
+Putting 'child-rox' into the file system...
+Executing 'rox-multichild':
+(rox-multichild) begin
+(rox-multichild) open "child-rox"
+(rox-multichild) read "child-rox"
+(rox-multichild) write "child-rox"
+(rox-multichild) exec "child-rox 5"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 4"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 3"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 2"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 1"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(rox-multichild) write "child-rox"
+(rox-multichild) end
+rox-multichild: exit(0)
+Execution of 'rox-multichild' complete.
+Timer: 73 ticks
+Thread: 11 idle ticks, 55 kernel ticks, 7 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 647 reads, 450 writes
+hd1:0: 222 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1954 characters output
+Keyboard: 0 keys pressed
+Exception: 25 page faults
+Powering off...

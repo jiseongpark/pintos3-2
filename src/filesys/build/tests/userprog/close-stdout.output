@@ -1,0 +1,30 @@
+Copying tests/userprog/close-stdout into /tmp/lVJoRyPWNS.dsk...
+Writing command line to /tmp/GWfsBk9uS7.dsk...
+qemu -hda /tmp/GWfsBk9uS7.dsk -hdb /tmp/jSMQYBEUF_.dsk -hdc /tmp/lVJoRyPWNS.dsk -hdd /tmp/yGTKwYEvJb.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put close-stdout run close-stdout
+0xc002f000
+Pintos booting with 4,088 kB RAM...
+368 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  444,825,600 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 103 sector (51 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'close-stdout' into the file system...
+Executing 'close-stdout':
+(close-stdout) begin
+close-stdout: exit(-1)
+Execution of 'close-stdout' complete.
+Timer: 65 ticks
+Thread: 6 idle ticks, 58 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 240 reads, 210 writes
+hd1:0: 103 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 922 characters output
+Keyboard: 0 keys pressed
+Exception: 4 page faults
+Powering off...

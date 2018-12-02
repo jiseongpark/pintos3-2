@@ -24,8 +24,7 @@ uint8_t* frame_get_fte(uint32_t *upage, enum palloc_flags flag)
 	// printf("KPAGE : %p\n", kpage);
 	
 	// ASSERT(frame_fte_lookup(kpage) != NULL);
-
-
+	// printf("FRAME SEMA BEOFRE %d\n", frame_sema.value);
 	sema_down(&frame_sema);
 
 	if(kpage == NULL)
@@ -35,6 +34,7 @@ uint8_t* frame_get_fte(uint32_t *upage, enum palloc_flags flag)
 	}
 	frame_set_fte(upage, kpage);
 	sema_up(&frame_sema);
+	// printf("FRAME SEMA AFTER %d\n", frame_sema.value);
 
 	return kpage;
 }
@@ -55,6 +55,7 @@ bool frame_set_fte(uint32_t *upage, uint32_t *kpage)
 void frame_remove_fte(uint32_t* kpage)
 {
 	if(kpage==NULL) return;
+	
 	sema_down(&frame_sema);
 	// printf("REMOVE KPAGE : %p\n", kpage);
 	FTE* fte = frame_fte_lookup(kpage);
@@ -74,6 +75,7 @@ void frame_remove_fte(uint32_t* kpage)
 	free(fte);
 
 	sema_up(&frame_sema);
+	// printf("FRAME SEMA AFTER\n");
 }
 
 
@@ -121,7 +123,6 @@ PARENT_SWAP:
 	}	
 	// printf("FTE UADDR : %p\n", fte->uaddr);
 	
-
 	swap_parent(fte->uaddr);
 	return NULL;
 }
@@ -129,6 +130,7 @@ PARENT_SWAP:
 void parent_remove_fte(uint32_t* kpage, struct thread* parent)
 {
 	ASSERT(kpage!=NULL);
+	
 	sema_down(&frame_sema);
 
 	FTE* fte = frame_fte_lookup(kpage);
@@ -148,6 +150,7 @@ void parent_remove_fte(uint32_t* kpage, struct thread* parent)
 	free(fte);
 
 	sema_up(&frame_sema);
+	// printf("FRAME SEMA AFTER\n");
 }
 
 

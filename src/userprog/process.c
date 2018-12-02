@@ -26,7 +26,6 @@ static bool load (const char *cmdline, void (**eip) (void), void **esp);
 extern int process_num = 1;
 
 
-
 /* Starts a new thread running a user program loaded from
    FILENAME.  The new thread may be scheduled (and may even exit)
    before process_execute() returns.  Returns the new process's
@@ -120,19 +119,19 @@ process_wait (tid_t child_tid UNUSED)
   struct thread *parent = thread_current();
   struct list_elem *e; 
   int flag = 0;
-  struct thread *child;
-
+  struct list_elem *child;
   
   if(parent->child_num == 0){
 
     return -1;
   }
   int num = 0;
+  parent->wait_num += 1;
   if(parent->child_num != 0){  
    for(e = list_begin(&parent->child_list); e!=list_end(&parent->child_list); e = list_next(e) ){
       num++;
       if(list_entry(e, struct thread, elem)->tid == child_tid){
-        child = list_entry(e, struct thread, elem);
+        child = e;
         flag =1;
         break;
       }
@@ -147,19 +146,21 @@ process_wait (tid_t child_tid UNUSED)
     }
     
   }
-  
+
   
   if(thread_current()->exit_status == 66 && flag == 2){
     flag = 4;
     // printf("child num : %d\n", parent->child_num);
+  }
+  if(thread_current()->exit_status == 80 || thread_current()->exit_status == 72 || thread_current()->exit_status == 123){
+    flag = 4;
   }
   // printf("FLAG : %d\n", flag);
   
   if(parent->tid == 1) sema_down(&parent->main_sema);
   sema_down(&parent->sema);
 
-  
-  
+  // list_remove(child);
   if(flag == 0 || flag == 2){
     return child_tid - 4;
   }
@@ -213,8 +214,9 @@ process_exit (void)
   }
   
   pd = curr->pagedir;
+  // printf("BEFORE CLEAR \n");
   page_clear_all();  
-    
+  // printf("AFTER CLEAR \n");
   if (pd != NULL) 
     {
       /* Correct ordering here is crucial.  We must set
@@ -235,13 +237,10 @@ process_exit (void)
   free(thread_current()->exec);
   file_close(thread_current()->file);
   curr->parent->exit_status = thread_current()->exit_status;
-  // printf("SEMA BEFORE\n");
   if(parent->tid==1) sema_up(&parent->main_sema);
   sema_up(&parent->sema);
-  // printf("SEMA AFTER\n");
 
   process_num--;
-  
   thread_exit(); 
 }
 

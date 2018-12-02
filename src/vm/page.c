@@ -15,20 +15,23 @@ void page_init(void)
 
 void page_table_init(struct hash* h){
 
-	if(h == NULL) return
-	sema_down(&page_sema);
+	if(h == NULL) return;
+	// sema_down(&page_sema);
   	hash_init(h, page_hash_hash_helper, page_hash_less_helper, NULL);
-  	sema_up(&page_sema);
+  	// sema_up(&page_sema);
 }
 
 bool lazy_load(uint32_t *upage, struct file *file, off_t ofs, 
 	size_t page_read_bytes, size_t page_zero_bytes, bool writable)
 {
-	sema_down(&page_sema);
+	// sema_down(&page_sema);
 
 	PTE *new_pte = (PTE*)malloc(sizeof(PTE));
 	if(new_pte == NULL)
+	{
+		// sema_up(&page_sema);
 		return false;
+	}
 
 	new_pte->paddr = -1;
 	new_pte->uaddr = upage;
@@ -46,7 +49,7 @@ bool lazy_load(uint32_t *upage, struct file *file, off_t ofs,
 
 	hash_insert(&thread_current()->pt, &new_pte->helem);
 	
-	sema_up(&page_sema);
+	// sema_up(&page_sema);
 
 	return true;
 }
@@ -94,7 +97,7 @@ void page_map(uint32_t *upage, uint32_t *kpage, bool writable)
 	if(upage == NULL || kpage == NULL) return;
 	struct thread *t= thread_current();
 	
-	sema_down(&page_sema);
+	// sema_down(&page_sema);
 	
 	PTE *new_pte = (PTE*)malloc(sizeof(PTE));
 	new_pte->paddr = kpage;
@@ -114,18 +117,18 @@ void page_map(uint32_t *upage, uint32_t *kpage, bool writable)
 	hash_insert(&t->pt, &new_pte->helem);
 	
 
-	sema_up(&page_sema);
+	// sema_up(&page_sema);
 }
 
 void page_remove_pte(uint32_t *upage)
 {
 	if(upage==NULL) return;
 
-	sema_down(&page_sema);
+	// sema_down(&page_sema);
 	PTE *pte = page_pte_lookup(upage);
 	hash_delete(&thread_current()->pt, &pte->helem);
 	free(pte);
-	sema_up(&page_sema);
+	// sema_up(&page_sema);
 }
 
 PTE* page_pte_lookup(uint32_t *addr)
@@ -183,11 +186,15 @@ void page_clear_all(void)
 
 	while(!list_empty(&del_list))
 	{
+
 		del_elem = list_pop_front(&del_list);
+
 		PTE *pte = list_entry(del_elem, PTE, elem);
+		// sema_up(&swap_sema);
 		frame_remove_fte(pte->paddr);
 		swap_remove_ste(pte->uaddr);
 		page_remove_pte(pte->uaddr);		
+		// sema_up(&swap_sema);
 	}
 
 	

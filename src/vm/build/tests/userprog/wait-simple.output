@@ -1,8 +1,9 @@
-Copying tests/userprog/wait-simple into /tmp/Sit9yk2e1N.dsk...
-Copying tests/userprog/child-simple into /tmp/Sit9yk2e1N.dsk...
-Writing command line to /tmp/RM22xcPE4p.dsk...
-qemu -hda /tmp/RM22xcPE4p.dsk -hdb /tmp/Vnm1qIAANG.dsk -hdc /tmp/Sit9yk2e1N.dsk -hdd /tmp/VwDCaTq247.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/wait-simple into /tmp/rC9M7flBPj.dsk...
+Copying tests/userprog/child-simple into /tmp/rC9M7flBPj.dsk...
+Writing command line to /tmp/RULOQhxNqn.dsk...
+qemu -hda /tmp/RULOQhxNqn.dsk -hdb /tmp/GzBGo4ZXnQ.dsk -hdc /tmp/rC9M7flBPj.dsk -hdd /tmp/JHKS6dq7jV.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put wait-simple put child-simple run wait-simple
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -23,13 +24,13 @@ child-simple: exit(81)
 (wait-simple) end
 wait-simple: exit(0)
 Execution of 'wait-simple' complete.
-Timer: 65 ticks
-Thread: 5 idle ticks, 57 kernel ticks, 3 user ticks
+Timer: 62 ticks
+Thread: 7 idle ticks, 53 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 156 reads, 424 writes
 hd1:0: 207 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1060 characters output
+Console: 1071 characters output
 Keyboard: 0 keys pressed
 Exception: 9 page faults
 Powering off...

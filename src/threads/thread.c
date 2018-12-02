@@ -99,7 +99,7 @@ thread_init (void)
   init_thread (initial_thread, "main", PRI_DEFAULT);
   initial_thread->status = THREAD_RUNNING;
   initial_thread->tid = allocate_tid ();
-
+  printf("%p\n", initial_thread);
 }
 
 /* Starts preemptive thread scheduling by enabling interrupts.
@@ -205,6 +205,7 @@ thread_create (const char *name, int priority,
   
   // enum intr_level old_level = intr_disable();
   list_push_back(&thread_current()->child_list, &t->elem);
+ 
   page_table_init(&t->pt);
   swap_table_init(&t->st);
   t->parent->child_num += 1;
@@ -247,12 +248,16 @@ thread_unblock (struct thread *t)
 {
   enum intr_level old_level;
 
+  // t = pg_round_down(t);
   ASSERT (is_thread (t));
 
   old_level = intr_disable ();
   ASSERT (t->status == THREAD_BLOCKED);
+  
   list_push_back (&ready_list, &t->elem);
   t->status = THREAD_READY;
+  // printf("INSER TID  : %d\n", list_entry(list_rbegin(&ready_list),struct thread, elem)->tid);
+  
   intr_set_level (old_level);
 }
 
@@ -460,6 +465,7 @@ init_thread (struct thread *t, const char *name, int priority)
   t->magic = THREAD_MAGIC;
 
   /* initialize for PJ2 */
+  t->wait_num = 0;
   t->pagedir = NULL;
   t->parent = NULL;
   t->file = NULL;
@@ -468,6 +474,7 @@ init_thread (struct thread *t, const char *name, int priority)
   t->executable = 0;
   t->exec = NULL;
   t->stack_end = NULL;
+
   list_init(&t->child_list);
   sema_init(&t->sema, 0);
   sema_init(&t->main_sema, 0);
@@ -559,6 +566,7 @@ schedule_tail (struct thread *prev)
 static void
 schedule (void) 
 {
+
   struct thread *curr = running_thread ();
   struct thread *next = next_thread_to_run ();
   struct thread *prev = NULL;
@@ -566,7 +574,6 @@ schedule (void)
   ASSERT (intr_get_level () == INTR_OFF);
   ASSERT (curr->status != THREAD_RUNNING);
   ASSERT (is_thread (next));
-
   if (curr != next)
     prev = switch_threads (curr, next);
   schedule_tail (prev);

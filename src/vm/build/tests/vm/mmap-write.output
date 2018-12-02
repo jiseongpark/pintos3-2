@@ -1,7 +1,8 @@
-Copying tests/vm/mmap-write into /tmp/l9HZCH4dC0.dsk...
-Writing command line to /tmp/tBU8Sl81xO.dsk...
-qemu -hda /tmp/tBU8Sl81xO.dsk -hdb /tmp/xlW0fdosRU.dsk -hdc /tmp/l9HZCH4dC0.dsk -hdd /tmp/UmOprb0RDs.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/mmap-write into /tmp/tAY3UAdFhC.dsk...
+Writing command line to /tmp/EdL0r3rFp4.dsk...
+qemu -hda /tmp/EdL0r3rFp4.dsk -hdb /tmp/IZAnE0lPSH.dsk -hdc /tmp/tAY3UAdFhC.dsk -hdd /tmp/v9M5WPXjZf.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put mmap-write run mmap-write
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -22,13 +23,13 @@ Executing 'mmap-write':
 (mmap-write) end
 mmap-write: exit(0)
 Execution of 'mmap-write' complete.
-Timer: 65 ticks
-Thread: 3 idle ticks, 58 kernel ticks, 4 user ticks
+Timer: 64 ticks
+Thread: 4 idle ticks, 58 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 116 reads, 230 writes
 hd1:0: 107 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1060 characters output
+Console: 1071 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

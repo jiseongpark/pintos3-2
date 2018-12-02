@@ -1,7 +1,8 @@
-Copying tests/userprog/args-dbl-space into /tmp/ibToeA_kMk.dsk...
-Writing command line to /tmp/137qT1iERy.dsk...
-qemu -hda /tmp/137qT1iERy.dsk -hdb /tmp/GV1bm8zvZm.dsk -hdc /tmp/ibToeA_kMk.dsk -hdd /tmp/57weIcZ5lv.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/args-dbl-space into /tmp/EKKhGTe70p.dsk...
+Writing command line to /tmp/7Icv_G00ut.dsk...
+qemu -hda /tmp/7Icv_G00ut.dsk -hdb /tmp/Yy7PKXVc1i.dsk -hdc /tmp/EKKhGTe70p.dsk -hdd /tmp/pfIzdOq93E.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put args-dbl-space run 'args-dbl-space two  spaces!'
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -29,7 +30,7 @@ hd0:0: 0 reads, 0 writes
 hd0:1: 76 reads, 214 writes
 hd1:0: 103 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1087 characters output
+Console: 1098 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

@@ -1,7 +1,8 @@
-Copying tests/userprog/exit into /tmp/8nnEx2uJw0.dsk...
-Writing command line to /tmp/_eWGDF4eL0.dsk...
-qemu -hda /tmp/_eWGDF4eL0.dsk -hdb /tmp/h2lWUQ9vEh.dsk -hdc /tmp/8nnEx2uJw0.dsk -hdd /tmp/Ic8kztEcAV.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/exit into /tmp/Jgj_kkpJGF.dsk...
+Writing command line to /tmp/qm9ewi_DbA.dsk...
+qemu -hda /tmp/qm9ewi_DbA.dsk -hdb /tmp/tamwwu1uro.dsk -hdc /tmp/Jgj_kkpJGF.dsk -hdd /tmp/e4VaUsveDV.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exit run exit
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -23,7 +24,7 @@ hd0:0: 0 reads, 0 writes
 hd0:1: 64 reads, 217 writes
 hd1:0: 103 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 854 characters output
+Console: 865 characters output
 Keyboard: 0 keys pressed
 Exception: 4 page faults
 Powering off...

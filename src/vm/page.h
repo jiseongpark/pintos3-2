@@ -21,9 +21,9 @@ typedef struct page_table_entry
 
 	int usertid;              /* process tid that use this frame */
 	bool is_swapped_out;      /* flag for swapped out */
-	bool dirty;               /* dirty bit flag */
+	bool dirty;               /* dirty bit flag UNUSED */
 	bool writable;            /* writable flag */
-	bool load;				  /* for load segment page */
+	bool load;				  /* for load segment page UNUSED*/
 
 	/* Lazy Loading */
 	struct file *file;        /* loading file */

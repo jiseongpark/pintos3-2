@@ -1,0 +1,61 @@
+Copying tests/vm/page-merge-stk into /tmp/p0eXXTeASu.dsk...
+Copying tests/vm/child-qsort into /tmp/p0eXXTeASu.dsk...
+Writing command line to /tmp/fbuz21_Otz.dsk...
+qemu -hda /tmp/fbuz21_Otz.dsk -hdb /tmp/1mmVoCfx6F.dsk -hdc /tmp/p0eXXTeASu.dsk -hdd /tmp/sgyptdrCEE.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put page-merge-stk put child-qsort run page-merge-stk
+0xc002f000
+Pintos booting with 4,088 kB RAM...
+368 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  471,040,000 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 225 sector (112 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'page-merge-stk' into the file system...
+Putting 'child-qsort' into the file system...
+Executing 'page-merge-stk':
+(page-merge-stk) begin
+(page-merge-stk) init
+(page-merge-stk) sort chunk 0
+(page-merge-stk) sort chunk 1
+child-qsort: exit(72)
+(page-merge-stk) sort chunk 2
+child-qsort: exit(72)
+(page-merge-stk) sort chunk 3
+child-qsort: exit(72)
+(page-merge-stk) sort chunk 4
+child-qsort: exit(72)
+(page-merge-stk) sort chunk 5
+child-qsort: exit(72)
+(page-merge-stk) sort chunk 6
+child-qsort: exit(72)
+(page-merge-stk) sort chunk 7
+child-qsort: exit(72)
+(page-merge-stk) wait for child 0
+(page-merge-stk) wait for child 1
+(page-merge-stk) wait for child 2
+(page-merge-stk) wait for child 3
+(page-merge-stk) wait for child 4
+(page-merge-stk) wait for child 5
+(page-merge-stk) wait for child 6
+(page-merge-stk) wait for child 7
+child-qsort: exit(72)
+(page-merge-stk) merge
+(page-merge-stk) verify
+(page-merge-stk) success, buf_idx=1,048,576
+(page-merge-stk) end
+page-merge-stk: exit(0)
+Execution of 'page-merge-stk' complete.
+Timer: 341 ticks
+Thread: 85 idle ticks, 61 kernel ticks, 195 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 10467 reads, 6623 writes
+hd1:0: 225 reads, 0 writes
+hd1:1: 504 reads, 1712 writes
+Console: 1832 characters output
+Keyboard: 0 keys pressed
+Exception: 868 page faults
+Powering off...

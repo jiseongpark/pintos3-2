@@ -1,8 +1,9 @@
-Copying tests/userprog/exec-arg into /tmp/dmjrBljAnQ.dsk...
-Copying tests/userprog/child-args into /tmp/dmjrBljAnQ.dsk...
-Writing command line to /tmp/DtYvxV9M1v.dsk...
-qemu -hda /tmp/DtYvxV9M1v.dsk -hdb /tmp/WTmhEDuzgo.dsk -hdc /tmp/dmjrBljAnQ.dsk -hdd /tmp/pffWz8PfOS.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/exec-arg into /tmp/Far6a_9hP5.dsk...
+Copying tests/userprog/child-args into /tmp/Far6a_9hP5.dsk...
+Writing command line to /tmp/9sxLsHaoJL.dsk...
+qemu -hda /tmp/9sxLsHaoJL.dsk -hdb /tmp/HBYQror2wL.dsk -hdc /tmp/Far6a_9hP5.dsk -hdd /tmp/8rsvoMJzF_.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exec-arg put child-args run exec-arg
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -28,12 +29,12 @@ child-args: exit(0)
 exec-arg: exit(0)
 Execution of 'exec-arg' complete.
 Timer: 68 ticks
-Thread: 7 idle ticks, 59 kernel ticks, 2 user ticks
+Thread: 6 idle ticks, 60 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 150 reads, 422 writes
 hd1:0: 206 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1098 characters output
+Console: 1109 characters output
 Keyboard: 0 keys pressed
 Exception: 10 page faults
 Powering off...

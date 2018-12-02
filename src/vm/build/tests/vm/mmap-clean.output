@@ -1,12 +1,13 @@
-Copying tests/vm/mmap-clean into /tmp/IAy27LGz_O.dsk...
-Copying ../../tests/vm/sample.txt into /tmp/IAy27LGz_O.dsk...
-Writing command line to /tmp/ZYJHNjXcbQ.dsk...
-qemu -hda /tmp/ZYJHNjXcbQ.dsk -hdb /tmp/0YEzlHVAcC.dsk -hdc /tmp/IAy27LGz_O.dsk -hdd /tmp/YlL7x7MM4h.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/mmap-clean into /tmp/SIfNTmIerR.dsk...
+Copying ../../tests/vm/sample.txt into /tmp/SIfNTmIerR.dsk...
+Writing command line to /tmp/jyCzP_KNCq.dsk...
+qemu -hda /tmp/jyCzP_KNCq.dsk -hdb /tmp/FJ1Gd7CzWF.dsk -hdc /tmp/SIfNTmIerR.dsk -hdd /tmp/sBFZ262Pbh.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put mmap-clean put sample.txt run mmap-clean
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
-Calibrating timer...  471,040,000 loops/s.
+Calibrating timer...  419,020,800 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 111 sector (55 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -27,13 +28,13 @@ Executing 'mmap-clean':
 (mmap-clean) end
 mmap-clean: exit(0)
 Execution of 'mmap-clean' complete.
-Timer: 64 ticks
-Thread: 5 idle ticks, 58 kernel ticks, 2 user ticks
+Timer: 59 ticks
+Thread: 5 idle ticks, 53 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 122 reads, 233 writes
 hd1:0: 111 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1213 characters output
+Console: 1224 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

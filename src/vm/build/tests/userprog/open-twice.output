@@ -1,8 +1,9 @@
-Copying tests/userprog/open-twice into /tmp/g5HNrZtb3N.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/g5HNrZtb3N.dsk...
-Writing command line to /tmp/H_p8ojM00L.dsk...
-qemu -hda /tmp/H_p8ojM00L.dsk -hdb /tmp/XeLLRQFjc1.dsk -hdc /tmp/g5HNrZtb3N.dsk -hdd /tmp/4F5VVc7G9Z.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/open-twice into /tmp/TQiun9xR3K.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/TQiun9xR3K.dsk...
+Writing command line to /tmp/wNfWXj5UOe.dsk...
+qemu -hda /tmp/wNfWXj5UOe.dsk -hdb /tmp/UL52sd59v3.dsk -hdc /tmp/TQiun9xR3K.dsk -hdd /tmp/BcAXLWwB_9.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put open-twice put sample.txt run open-twice
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -22,13 +23,13 @@ Executing 'open-twice':
 (open-twice) end
 open-twice: exit(0)
 Execution of 'open-twice' complete.
-Timer: 63 ticks
-Thread: 2 idle ticks, 60 kernel ticks, 1 user ticks
+Timer: 62 ticks
+Thread: 2 idle ticks, 59 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 116 reads, 222 writes
 hd1:0: 106 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1046 characters output
+Console: 1057 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

@@ -1,7 +1,8 @@
-Copying tests/vm/page-shuffle into /tmp/nRtMuA8NgD.dsk...
-Writing command line to /tmp/tqwzNO52yo.dsk...
-qemu -hda /tmp/tqwzNO52yo.dsk -hdb /tmp/wwazyB22Je.dsk -hdc /tmp/nRtMuA8NgD.dsk -hdd /tmp/lUZS4bP6qu.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/page-shuffle into /tmp/otZvpQHWe1.dsk...
+Writing command line to /tmp/wLg_b_c7Tk.dsk...
+qemu -hda /tmp/wLg_b_c7Tk.dsk -hdb /tmp/TILuhYYy6u.dsk -hdc /tmp/otZvpQHWe1.dsk -hdd /tmp/532_Asir2n.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put page-shuffle run page-shuffle
+0xc002f000
 Pintos booting with 4,088 kB RAM...
 372 pages available in kernel pool.
 372 pages available in user pool.
@@ -29,13 +30,13 @@ Executing 'page-shuffle':
 (page-shuffle) end
 page-shuffle: exit(0)
 Execution of 'page-shuffle' complete.
-Timer: 86 ticks
-Thread: 4 idle ticks, 54 kernel ticks, 28 user ticks
+Timer: 83 ticks
+Thread: 4 idle ticks, 52 kernel ticks, 27 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 78 reads, 234 writes
 hd1:0: 113 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1394 characters output
+Console: 1405 characters output
 Keyboard: 0 keys pressed
 Exception: 36 page faults
 Powering off...

@@ -1,0 +1,36 @@
+Copying tests/filesys/extended/grow-tell into /tmp/5s3CEBNafb.dsk...
+Copying tests/filesys/extended/tar into /tmp/5s3CEBNafb.dsk...
+Writing command line to /tmp/r4c1EtZ12H.dsk...
+qemu -hda /tmp/r4c1EtZ12H.dsk -hdb tmp.dsk -hdc /tmp/5s3CEBNafb.dsk -hdd /tmp/hXucQ5Fx5Q.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put grow-tell put tar run grow-tell
+0xc002f000
+Pintos booting with 4,088 kB RAM...
+368 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  419,020,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 227 sector (113 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'grow-tell' into the file system...
+Putting 'tar' into the file system...
+Executing 'grow-tell':
+(grow-tell) begin
+(grow-tell) create "foobar"
+(grow-tell) open "foobar"
+(grow-tell) writing "foobar"
+(grow-tell) file position not updated properly: should be 37, actually 0: FAILED
+grow-tell: exit(1)
+Execution of 'grow-tell' complete.
+Timer: 67 ticks
+Thread: 9 idle ticks, 56 kernel ticks, 2 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 498 reads, 462 writes
+hd1:0: 227 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1111 characters output
+Keyboard: 0 keys pressed
+Exception: 5 page faults
+Powering off...

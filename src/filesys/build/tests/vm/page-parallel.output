@@ -1,0 +1,27 @@
+Copying tests/vm/page-parallel into /tmp/k3gUyVH1Bg.dsk...
+Copying tests/vm/child-linear into /tmp/k3gUyVH1Bg.dsk...
+Writing command line to /tmp/M4pldVIjkr.dsk...
+qemu -hda /tmp/M4pldVIjkr.dsk -hdb /tmp/IzzQ7dzfbw.dsk -hdc /tmp/k3gUyVH1Bg.dsk -hdd /tmp/H0ii9LnnIx.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put page-parallel put child-linear run page-parallel
+0xc002f000
+Pintos booting with 4,088 kB RAM...
+368 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  425,164,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 212 sector (106 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'page-parallel' into the file system...
+Putting 'child-linear' into the file system...
+Executing 'page-parallel':
+(page-parallel) begin
+(page-parallel) exec "child-linear"
+(page-parallel) exec "child-linear"
+(page-parallel) exec "child-linear"
+swap parent entered
+child-linear: exit(66)
+
+TIMEOUT after 6 seconds of wall-clock time - load average: 0.23, 0.22, 0.17
