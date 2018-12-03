@@ -1,7 +1,7 @@
-Copying tests/vm/mmap-clean into /tmp/ZD8mF3Cxi4.dsk...
-Copying ../../tests/vm/sample.txt into /tmp/ZD8mF3Cxi4.dsk...
-Writing command line to /tmp/iDWI5fDe42.dsk...
-qemu -hda /tmp/iDWI5fDe42.dsk -hdb /tmp/XDo7bjY9aX.dsk -hdc /tmp/ZD8mF3Cxi4.dsk -hdd /tmp/5VAuiQoP2l.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/mmap-clean into /tmp/BrV8AD7bOB.dsk...
+Copying ../../tests/vm/sample.txt into /tmp/BrV8AD7bOB.dsk...
+Writing command line to /tmp/yqCZFJukDN.dsk...
+qemu -hda /tmp/yqCZFJukDN.dsk -hdb /tmp/TU2ldVLSz2.dsk -hdc /tmp/BrV8AD7bOB.dsk -hdd /tmp/66euXxJgIf.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put mmap-clean put sample.txt run mmap-clean
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -28,10 +28,10 @@ Executing 'mmap-clean':
 (mmap-clean) end
 mmap-clean: exit(0)
 Execution of 'mmap-clean' complete.
-Timer: 61 ticks
-Thread: 5 idle ticks, 54 kernel ticks, 2 user ticks
+Timer: 60 ticks
+Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 265 reads, 225 writes
+hd0:1: 122 reads, 233 writes
 hd1:0: 111 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1224 characters output

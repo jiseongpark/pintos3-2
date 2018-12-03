@@ -1,11 +1,11 @@
-Writing command line to /tmp/pW7jZ8R1jh.dsk...
-qemu -hda /tmp/pW7jZ8R1jh.dsk -hdb tmp.dsk -hdc /tmp/Vcx3J_XhCW.dsk -hdd /tmp/WJqU5QTceU.dsk -m 4 -net none -nographic -monitor null
+Writing command line to /tmp/WWstHCpKY9.dsk...
+qemu -hda /tmp/WWstHCpKY9.dsk -hdb tmp.dsk -hdc /tmp/MWi_k2tRJ_.dsk -hdd /tmp/KLbAAgePvC.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  471,040,000 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -16,33 +16,14 @@ Executing 'tar fs.tar /':
 tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
-Kernel PANIC at ../../filesys/cache.c:56 in buffer_cache_flush(): assertion `buffer_cache[index].used == true' failed.
-Call stack: 0xc002ff08main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-main: exit(-1)
-Kernel PANIC recursion at ../../threads/thread.c:284 in thread_current().
-Kernel command line: -q run 'tar fs.tar /' get fs.tar
-0xc002f000
-Pintos booting with 4,088 kB RAM...
-368 pages available in kernel pool.
-367 pages available in user pool.
-Calibrating timer...  441,548,800 loops/s.
-hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
-hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
-hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
-hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
-Boot complete.
-Executing 'tar fs.tar /':
-tar: exit(-1)
-Simulation terminated due to kernel panic.
+Timer: 60 ticks
+Thread: 0 idle ticks, 60 kernel ticks, 0 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 87 reads, 7 writes
+hd1:0: 0 reads, 1 writes
+hd1:1: 0 reads, 0 writes
+Console: 861 characters output
+Keyboard: 0 keys pressed
+Exception: 3 page faults
+Powering off...
+Copying tests/filesys/extended/dir-rm-cwd.tar out of /tmp/MWi_k2tRJ_.dsk...

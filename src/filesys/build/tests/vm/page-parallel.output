@@ -1,13 +1,13 @@
-Copying tests/vm/page-parallel into /tmp/k3gUyVH1Bg.dsk...
-Copying tests/vm/child-linear into /tmp/k3gUyVH1Bg.dsk...
-Writing command line to /tmp/M4pldVIjkr.dsk...
-qemu -hda /tmp/M4pldVIjkr.dsk -hdb /tmp/IzzQ7dzfbw.dsk -hdc /tmp/k3gUyVH1Bg.dsk -hdd /tmp/H0ii9LnnIx.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/page-parallel into /tmp/gkzGcVieLH.dsk...
+Copying tests/vm/child-linear into /tmp/gkzGcVieLH.dsk...
+Writing command line to /tmp/Uh2iW3XzFZ.dsk...
+qemu -hda /tmp/Uh2iW3XzFZ.dsk -hdb /tmp/q9wGoOqCjn.dsk -hdc /tmp/gkzGcVieLH.dsk -hdd /tmp/2O9H4YNT8j.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put page-parallel put child-linear run page-parallel
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  425,164,800 loops/s.
+Calibrating timer...  471,040,000 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 212 sector (106 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -21,7 +21,25 @@ Executing 'page-parallel':
 (page-parallel) exec "child-linear"
 (page-parallel) exec "child-linear"
 (page-parallel) exec "child-linear"
-swap parent entered
 child-linear: exit(66)
-
-TIMEOUT after 6 seconds of wall-clock time - load average: 0.23, 0.22, 0.17
+child-linear: exit(66)
+(page-parallel) exec "child-linear"
+(page-parallel) wait for child 0
+(page-parallel) wait for child 1
+(page-parallel) wait for child 2
+child-linear: exit(66)
+(page-parallel) wait for child 3
+child-linear: exit(66)
+(page-parallel) end
+page-parallel: exit(0)
+Execution of 'page-parallel' complete.
+Timer: 107 ticks
+Thread: 0 idle ticks, 70 kernel ticks, 37 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 285 reads, 434 writes
+hd1:0: 212 reads, 0 writes
+hd1:1: 32 reads, 32 writes
+Console: 1385 characters output
+Keyboard: 0 keys pressed
+Exception: 1045 page faults
+Powering off...

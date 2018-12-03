@@ -1,13 +1,13 @@
-Copying tests/vm/page-merge-par into /tmp/rDukqc7IL4.dsk...
-Copying tests/vm/child-sort into /tmp/rDukqc7IL4.dsk...
-Writing command line to /tmp/YcS_TRY9O5.dsk...
-qemu -hda /tmp/YcS_TRY9O5.dsk -hdb /tmp/ikfXGJc4tk.dsk -hdc /tmp/rDukqc7IL4.dsk -hdd /tmp/To5zlqXWQq.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/page-merge-par into /tmp/J5Ta8XdjGK.dsk...
+Copying tests/vm/child-sort into /tmp/J5Ta8XdjGK.dsk...
+Writing command line to /tmp/otAoEbI3nx.dsk...
+qemu -hda /tmp/otAoEbI3nx.dsk -hdb /tmp/vVCkT5UHAt.dsk -hdc /tmp/J5Ta8XdjGK.dsk -hdd /tmp/oSdsts7wBI.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put page-merge-par put child-sort run page-merge-par
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  444,825,600 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 220 sector (110 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -33,8 +33,8 @@ child-sort: exit(123)
 (page-merge-par) sort chunk 6
 child-sort: exit(123)
 (page-merge-par) sort chunk 7
-child-sort: exit(123)
 (page-merge-par) wait for child 0
+child-sort: exit(123)
 (page-merge-par) wait for child 1
 (page-merge-par) wait for child 2
 (page-merge-par) wait for child 3
@@ -49,13 +49,13 @@ child-sort: exit(123)
 (page-merge-par) end
 page-merge-par: exit(0)
 Execution of 'page-merge-par' complete.
-Timer: 309 ticks
-Thread: 78 idle ticks, 59 kernel ticks, 173 user ticks
+Timer: 260 ticks
+Thread: 44 idle ticks, 82 kernel ticks, 135 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 10436 reads, 6613 writes
+hd0:1: 4960 reads, 6626 writes
 hd1:0: 220 reads, 0 writes
 hd1:1: 504 reads, 1712 writes
-Console: 1830 characters output
+Console: 1829 characters output
 Keyboard: 0 keys pressed
 Exception: 868 page faults
 Powering off...

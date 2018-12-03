@@ -179,7 +179,7 @@ bool swap_out(uint32_t *uaddr)
 
 void swap_parent(uint32_t* uaddr){
 	/* page_pte_lookup*/
-	printf("swap parent entered\n");
+	// printf("swap parent entered\n");
 	
 	struct thread* parent = thread_current()->parent;
 	PTE* pte = parent_page_lookup(uaddr,parent);

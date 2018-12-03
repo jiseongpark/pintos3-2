@@ -126,6 +126,8 @@ main (void)
   disk_init ();
   
   filesys_init (format_filesys);
+  thread_create("periodic", PRI_DEFAULT, periodic_flush_all, NULL);
+  
 
 
 #endif
@@ -134,10 +136,12 @@ main (void)
   
   /* Run actions specified on kernel command line. */
   run_actions (argv);
-
+  
   /* Finish up. */
-  if (power_off_when_done)
+  if (power_off_when_done){
     power_off ();
+  }
+  
   thread_exit ();
 
 }
@@ -383,6 +387,8 @@ power_off (void)
 
 #ifdef FILESYS
   filesys_done ();
+  
+
 #endif
 
   print_stats ();

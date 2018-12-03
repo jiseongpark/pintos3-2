@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/grow-tell into /tmp/5s3CEBNafb.dsk...
-Copying tests/filesys/extended/tar into /tmp/5s3CEBNafb.dsk...
-Writing command line to /tmp/r4c1EtZ12H.dsk...
-qemu -hda /tmp/r4c1EtZ12H.dsk -hdb tmp.dsk -hdc /tmp/5s3CEBNafb.dsk -hdd /tmp/hXucQ5Fx5Q.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-tell into /tmp/LqGzh78cW5.dsk...
+Copying tests/filesys/extended/tar into /tmp/LqGzh78cW5.dsk...
+Writing command line to /tmp/tg_81iJLNM.dsk...
+qemu -hda /tmp/tg_81iJLNM.dsk -hdb tmp.dsk -hdc /tmp/LqGzh78cW5.dsk -hdd /tmp/L_gE5aRhhb.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-tell put tar run grow-tell
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  425,164,800 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 227 sector (113 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -24,10 +24,10 @@ Executing 'grow-tell':
 (grow-tell) file position not updated properly: should be 37, actually 0: FAILED
 grow-tell: exit(1)
 Execution of 'grow-tell' complete.
-Timer: 67 ticks
-Thread: 9 idle ticks, 56 kernel ticks, 2 user ticks
+Timer: 73 ticks
+Thread: 0 idle ticks, 70 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 498 reads, 462 writes
+hd0:1: 132 reads, 468 writes
 hd1:0: 227 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1111 characters output

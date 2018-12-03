@@ -1,2 +1,2 @@
 FAIL
-run: open "logfile": FAILED
+run: TIMEOUT after 5 seconds of host CPU time

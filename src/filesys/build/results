@@ -14,7 +14,7 @@ pass tests/userprog/create-empty
 pass tests/userprog/create-null
 pass tests/userprog/create-bad-ptr
 pass tests/userprog/create-long
-FAIL tests/userprog/create-exists
+pass tests/userprog/create-exists
 pass tests/userprog/create-bound
 pass tests/userprog/open-normal
 pass tests/userprog/open-missing
@@ -43,7 +43,7 @@ pass tests/userprog/write-bad-fd
 pass tests/userprog/exec-once
 pass tests/userprog/exec-arg
 pass tests/userprog/exec-multiple
-FAIL tests/userprog/exec-missing
+pass tests/userprog/exec-missing
 pass tests/userprog/exec-bad-ptr
 pass tests/userprog/wait-simple
 pass tests/userprog/wait-twice
@@ -106,11 +106,11 @@ pass tests/vm/pt-write-code
 pass tests/vm/pt-write-code2
 pass tests/vm/pt-grow-stk-sc
 pass tests/vm/page-linear
-FAIL tests/vm/page-parallel
-pass tests/vm/page-merge-seq
+pass tests/vm/page-parallel
+FAIL tests/vm/page-merge-seq
 pass tests/vm/page-merge-par
 pass tests/vm/page-merge-stk
-pass tests/vm/page-merge-mm
+FAIL tests/vm/page-merge-mm
 pass tests/vm/page-shuffle
 pass tests/vm/mmap-read
 pass tests/vm/mmap-close
@@ -118,7 +118,7 @@ pass tests/vm/mmap-unmap
 pass tests/vm/mmap-overlap
 pass tests/vm/mmap-twice
 pass tests/vm/mmap-write
-pass tests/vm/mmap-exit
+FAIL tests/vm/mmap-exit
 pass tests/vm/mmap-shuffle
 pass tests/vm/mmap-bad-fd
 pass tests/vm/mmap-clean

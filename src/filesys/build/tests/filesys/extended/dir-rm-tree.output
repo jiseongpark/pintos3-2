@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/dir-rm-tree into /tmp/mVBGJvl8Gp.dsk...
-Copying tests/filesys/extended/tar into /tmp/mVBGJvl8Gp.dsk...
-Writing command line to /tmp/W_tQ5wzZh_.dsk...
-qemu -hda /tmp/W_tQ5wzZh_.dsk -hdb tmp.dsk -hdc /tmp/mVBGJvl8Gp.dsk -hdd /tmp/D0aATiS2C6.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-rm-tree into /tmp/OlVySpRj12.dsk...
+Copying tests/filesys/extended/tar into /tmp/OlVySpRj12.dsk...
+Writing command line to /tmp/jGrsWPkx6c.dsk...
+qemu -hda /tmp/jGrsWPkx6c.dsk -hdb tmp.dsk -hdc /tmp/OlVySpRj12.dsk -hdd /tmp/julecMncCk.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rm-tree put tar run dir-rm-tree
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  464,486,400 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 233 sector (116 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -22,13 +22,13 @@ Executing 'dir-rm-tree':
 (dir-rm-tree) create "/0/1/0/2": FAILED
 dir-rm-tree: exit(1)
 Execution of 'dir-rm-tree' complete.
-Timer: 68 ticks
-Thread: 10 idle ticks, 57 kernel ticks, 1 user ticks
+Timer: 76 ticks
+Thread: 0 idle ticks, 74 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 539 reads, 488 writes
+hd0:1: 555 reads, 536 writes
 hd1:0: 233 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1054 characters output
+Console: 1053 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

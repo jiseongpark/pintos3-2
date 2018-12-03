@@ -1,6 +1,6 @@
-Copying tests/userprog/bad-jump into /tmp/59tnfVqNuk.dsk...
-Writing command line to /tmp/IWm5nXuBX3.dsk...
-qemu -hda /tmp/IWm5nXuBX3.dsk -hdb /tmp/ZnNi3zGZFt.dsk -hdc /tmp/59tnfVqNuk.dsk -hdd /tmp/8TM8ro7eh7.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/bad-jump into /tmp/AUl4MM41D3.dsk...
+Writing command line to /tmp/jNCd9TVbAi.dsk...
+qemu -hda /tmp/jNCd9TVbAi.dsk -hdb /tmp/MSOCa9B3nj.dsk -hdc /tmp/AUl4MM41D3.dsk -hdd /tmp/02JPqM7VL4.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put bad-jump run bad-jump
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -18,13 +18,13 @@ Executing 'bad-jump':
 (bad-jump) begin
 bad-jump: exit(-1)
 Execution of 'bad-jump' complete.
-Timer: 60 ticks
-Thread: 6 idle ticks, 54 kernel ticks, 0 user ticks
+Timer: 59 ticks
+Thread: 0 idle ticks, 57 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 242 reads, 212 writes
+hd0:1: 76 reads, 216 writes
 hd1:0: 104 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 894 characters output
+Console: 893 characters output
 Keyboard: 0 keys pressed
 Exception: 6 page faults
 Powering off...

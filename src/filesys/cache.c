@@ -3,6 +3,9 @@
 #include "threads/thread.h"
 #include <string.h>
 #include <debug.h>
+#include <stdlib.h>
+
+#define FLUSH_PERIOD 1000
 
 void buffer_cache_init(void)
 {
@@ -45,7 +48,6 @@ int buffer_cache_lru_eviction(void)
 	}
 	if(buffer_cache[lru].dirty)
 		buffer_cache_flush(lru);
-	
 
 	return lru;
 }
@@ -68,7 +70,8 @@ void buffer_cache_flush_all(void)
 	sema_down(&cache_sema);
 	for (; i<64; i++)
 	{
-	 buffer_cache_flush(i);
+		if(buffer_cache[i].dirty)
+			buffer_cache_flush(i);
 	}
 	sema_up(&cache_sema);
 }
@@ -89,8 +92,9 @@ int buffer_cache_find(disk_sector_t sector)
 void buffer_cache_write(disk_sector_t sector, void *buffer)
 {
 	
-	int buffer_cache_idx = buffer_cache_find(sector);
 	sema_down(&cache_sema);
+	int buffer_cache_idx = buffer_cache_find(sector);
+	
 	if(buffer_cache_idx == -1)
 	{
 		int evict_idx = buffer_cache_lru_eviction();
@@ -118,9 +122,9 @@ void buffer_cache_write(disk_sector_t sector, void *buffer)
 
 void buffer_cache_read(disk_sector_t sector, void *buffer)
 {
-	
-	int buffer_cache_idx = buffer_cache_find(sector);
 	sema_down(&cache_sema);
+	int buffer_cache_idx = buffer_cache_find(sector);
+	
 	if(buffer_cache_idx == -1)
 	{
 		int evict_idx = buffer_cache_lru_eviction();
@@ -141,4 +145,33 @@ void buffer_cache_read(disk_sector_t sector, void *buffer)
 	memmove(buffer, buffer_cache[buffer_cache_idx].buffer, DISK_SECTOR_SIZE);
 	
 	sema_up(&cache_sema);
+
+	read_ahead(sector);
+}
+
+void periodic_flush_all(void)
+{
+	while(true){
+		buffer_cache_flush_all();
+		timer_sleep(FLUSH_PERIOD);
+	}
+}
+
+void read_ahead(disk_sector_t sector)
+{
+	disk_sector_t *sec_num = (disk_sector_t *)malloc(sizeof(disk_sector_t));
+	*sec_num = sector + 1;
+	thread_create("read-ahead", PRI_DEFAULT, read_ahead_func, sec_num);
+}
+
+void read_ahead_func(disk_sector_t *sector)
+{
+	sema_down(&cache_sema);
+	int buffer_idx = buffer_cache_lru_eviction();
+	buffer_cache[buffer_idx].used = true;
+	buffer_cache[buffer_idx].dirty = false;
+	buffer_cache[buffer_idx].sec_num = *sector;
+	disk_read(disk_get(0,1), *sector, buffer_cache[buffer_idx].buffer);
+	sema_up(&cache_sema);
+	free(sector);
 }

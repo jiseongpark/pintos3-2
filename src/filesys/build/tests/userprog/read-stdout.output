@@ -1,6 +1,6 @@
-Copying tests/userprog/read-stdout into /tmp/U3vyebcN5q.dsk...
-Writing command line to /tmp/1ej6prUzMh.dsk...
-qemu -hda /tmp/1ej6prUzMh.dsk -hdb /tmp/tRsbhNzl3l.dsk -hdc /tmp/U3vyebcN5q.dsk -hdd /tmp/DYUj0U9uQa.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/read-stdout into /tmp/XnV88q2wK_.dsk...
+Writing command line to /tmp/rlvIGLcEK1.dsk...
+qemu -hda /tmp/rlvIGLcEK1.dsk -hdb /tmp/fvuQiV5XBL.dsk -hdc /tmp/XnV88q2wK_.dsk -hdd /tmp/O9y1APPUaH.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put read-stdout run read-stdout
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -19,12 +19,12 @@ Executing 'read-stdout':
 read-stdout: exit(-1)
 Execution of 'read-stdout' complete.
 Timer: 59 ticks
-Thread: 2 idle ticks, 56 kernel ticks, 1 user ticks
+Thread: 0 idle ticks, 57 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 242 reads, 212 writes
+hd0:1: 76 reads, 216 writes
 hd1:0: 104 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 915 characters output
+Console: 914 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/dir-rm-root into /tmp/5yCbrwPSs1.dsk...
-Copying tests/filesys/extended/tar into /tmp/5yCbrwPSs1.dsk...
-Writing command line to /tmp/G5nw1uOKF1.dsk...
-qemu -hda /tmp/G5nw1uOKF1.dsk -hdb tmp.dsk -hdc /tmp/5yCbrwPSs1.dsk -hdd /tmp/ElFtbjKCMD.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-rm-root into /tmp/HfN26WG1xQ.dsk...
+Copying tests/filesys/extended/tar into /tmp/HfN26WG1xQ.dsk...
+Writing command line to /tmp/ZQkEby6JlQ.dsk...
+qemu -hda /tmp/ZQkEby6JlQ.dsk -hdb tmp.dsk -hdc /tmp/HfN26WG1xQ.dsk -hdd /tmp/uRHgY7OGwi.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rm-root put tar run dir-rm-root
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  471,040,000 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 225 sector (112 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -23,13 +23,13 @@ Executing 'dir-rm-root':
 (dir-rm-root) end
 dir-rm-root: exit(0)
 Execution of 'dir-rm-root' complete.
-Timer: 67 ticks
-Thread: 10 idle ticks, 56 kernel ticks, 1 user ticks
+Timer: 68 ticks
+Thread: 0 idle ticks, 66 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 496 reads, 459 writes
+hd0:1: 144 reads, 465 writes
 hd1:0: 225 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1043 characters output
+Console: 1042 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...
