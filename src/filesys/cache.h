@@ -26,7 +26,7 @@ void buffer_cache_write(disk_sector_t sector, void *buffer);
 void buffer_cache_read(disk_sector_t sector, void *buffer);
 void periodic_flush_all(void);
 void read_ahead(disk_sector_t sector);
-void read_ahead_func(disk_sector_t *sector);
+void read_ahead_func(void);
 
 
 #endif /* filesys/cache.h */

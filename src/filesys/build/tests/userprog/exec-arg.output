@@ -1,17 +1,18 @@
-Copying tests/userprog/exec-arg into /tmp/1qwBbG2SQA.dsk...
-Copying tests/userprog/child-args into /tmp/1qwBbG2SQA.dsk...
-Writing command line to /tmp/0X0PHK64u1.dsk...
-qemu -hda /tmp/0X0PHK64u1.dsk -hdb /tmp/g3yxfCInbC.dsk -hdc /tmp/1qwBbG2SQA.dsk -hdd /tmp/jIbiiVK9NC.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/exec-arg into /tmp/5Zqc4iCIW3.dsk...
+Copying tests/userprog/child-args into /tmp/5Zqc4iCIW3.dsk...
+Writing command line to /tmp/o0E4DCKR6V.dsk...
+qemu -hda /tmp/o0E4DCKR6V.dsk -hdb /tmp/adVlzq9f7X.dsk -hdc /tmp/5Zqc4iCIW3.dsk -hdd /tmp/XoZyzdx7U3.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exec-arg put child-args run exec-arg
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  431,718,400 loops/s.
+Calibrating timer...  438,272,000 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 206 sector (103 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'exec-arg' into the file system...
@@ -28,13 +29,13 @@ child-args: exit(0)
 (exec-arg) end
 exec-arg: exit(0)
 Execution of 'exec-arg' complete.
-Timer: 71 ticks
-Thread: 0 idle ticks, 69 kernel ticks, 2 user ticks
+Timer: 87 ticks
+Thread: 0 idle ticks, 84 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 150 reads, 422 writes
+hd0:1: 828 reads, 418 writes
 hd1:0: 206 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1109 characters output
+Console: 1119 characters output
 Keyboard: 0 keys pressed
 Exception: 10 page faults
 Powering off...

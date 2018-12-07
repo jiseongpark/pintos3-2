@@ -1,16 +1,17 @@
-Copying tests/userprog/exec-bad-ptr into /tmp/Akv6C9bGU7.dsk...
-Writing command line to /tmp/RtdZWKf5g1.dsk...
-qemu -hda /tmp/RtdZWKf5g1.dsk -hdb /tmp/C5VOXYVYMY.dsk -hdc /tmp/Akv6C9bGU7.dsk -hdd /tmp/GrZBBs6hNK.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/exec-bad-ptr into /tmp/KEILu2f_60.dsk...
+Writing command line to /tmp/ejHG8cPhSe.dsk...
+qemu -hda /tmp/ejHG8cPhSe.dsk -hdb /tmp/zk4PY1UPSM.dsk -hdc /tmp/KEILu2f_60.dsk -hdd /tmp/NM5dglRCjA.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exec-bad-ptr run exec-bad-ptr
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  314,163,200 loops/s.
+Calibrating timer...  470,220,800 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 103 sector (51 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'exec-bad-ptr' into the file system...
@@ -18,13 +19,13 @@ Executing 'exec-bad-ptr':
 (exec-bad-ptr) begin
 exec-bad-ptr: exit(-1)
 Execution of 'exec-bad-ptr' complete.
-Timer: 60 ticks
-Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
+Timer: 69 ticks
+Thread: 0 idle ticks, 68 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 76 reads, 214 writes
+hd0:1: 416 reads, 211 writes
 hd1:0: 103 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 921 characters output
+Console: 932 characters output
 Keyboard: 0 keys pressed
 Exception: 4 page faults
 Powering off...

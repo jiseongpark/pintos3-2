@@ -1,17 +1,18 @@
-Copying tests/filesys/extended/dir-rm-cwd into /tmp/HQl0HZUjou.dsk...
-Copying tests/filesys/extended/tar into /tmp/HQl0HZUjou.dsk...
-Writing command line to /tmp/EdlpH0rdsm.dsk...
-qemu -hda /tmp/EdlpH0rdsm.dsk -hdb tmp.dsk -hdc /tmp/HQl0HZUjou.dsk -hdd /tmp/4so2Djrhbu.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-rm-cwd into /tmp/1BXhK1zWeE.dsk...
+Copying tests/filesys/extended/tar into /tmp/1BXhK1zWeE.dsk...
+Writing command line to /tmp/qwJwnmq8HI.dsk...
+qemu -hda /tmp/qwJwnmq8HI.dsk -hdb tmp.dsk -hdc /tmp/1BXhK1zWeE.dsk -hdd /tmp/a31l8JSIre.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rm-cwd put tar run dir-rm-cwd
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  444,825,600 loops/s.
+Calibrating timer...  431,718,400 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 230 sector (115 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'dir-rm-cwd' into the file system...
@@ -22,13 +23,13 @@ Executing 'dir-rm-cwd':
 (dir-rm-cwd) open "/": FAILED
 dir-rm-cwd: exit(1)
 Execution of 'dir-rm-cwd' complete.
-Timer: 70 ticks
-Thread: 0 idle ticks, 68 kernel ticks, 2 user ticks
+Timer: 91 ticks
+Thread: 0 idle ticks, 91 kernel ticks, 0 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 122 reads, 470 writes
+hd0:1: 848 reads, 466 writes
 hd1:0: 230 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1006 characters output
+Console: 1016 characters output
 Keyboard: 0 keys pressed
 Exception: 4 page faults
 Powering off...

@@ -1,16 +1,17 @@
-Copying tests/userprog/close-stdout into /tmp/6z4pwlBcYa.dsk...
-Writing command line to /tmp/UAKu2WEqx5.dsk...
-qemu -hda /tmp/UAKu2WEqx5.dsk -hdb /tmp/13zNaLs6B0.dsk -hdc /tmp/6z4pwlBcYa.dsk -hdd /tmp/fdBBXZtUYl.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/close-stdout into /tmp/S0IShZeLrD.dsk...
+Writing command line to /tmp/Y24sZBPCEk.dsk...
+qemu -hda /tmp/Y24sZBPCEk.dsk -hdb /tmp/Mb0OjtY5Di.dsk -hdc /tmp/S0IShZeLrD.dsk -hdd /tmp/8_hjBP9RY0.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put close-stdout run close-stdout
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  444,825,600 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 103 sector (51 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'close-stdout' into the file system...
@@ -18,13 +19,13 @@ Executing 'close-stdout':
 (close-stdout) begin
 close-stdout: exit(-1)
 Execution of 'close-stdout' complete.
-Timer: 58 ticks
-Thread: 0 idle ticks, 57 kernel ticks, 1 user ticks
+Timer: 71 ticks
+Thread: 0 idle ticks, 70 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 76 reads, 214 writes
+hd0:1: 416 reads, 211 writes
 hd1:0: 103 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 921 characters output
+Console: 932 characters output
 Keyboard: 0 keys pressed
 Exception: 4 page faults
 Powering off...

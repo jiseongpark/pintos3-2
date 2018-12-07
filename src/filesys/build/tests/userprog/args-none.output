@@ -1,16 +1,17 @@
-Copying tests/userprog/args-none into /tmp/R0h8ujWi1_.dsk...
-Writing command line to /tmp/DLfUqYSKPS.dsk...
-qemu -hda /tmp/DLfUqYSKPS.dsk -hdb /tmp/x74bH5_FSx.dsk -hdc /tmp/R0h8ujWi1_.dsk -hdd /tmp/WPbDPWeb_e.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/args-none into /tmp/YLS51CL1lM.dsk...
+Writing command line to /tmp/pOLWHnOdfv.dsk...
+qemu -hda /tmp/pOLWHnOdfv.dsk -hdb /tmp/tq7KE3UYyq.dsk -hdc /tmp/YLS51CL1lM.dsk -hdd /tmp/jeRRXR3ERk.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put args-none run args-none
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  421,068,800 loops/s.
+Calibrating timer...  444,825,600 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 103 sector (51 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'args-none' into the file system...
@@ -22,13 +23,13 @@ Executing 'args-none':
 (args) end
 args-none: exit(0)
 Execution of 'args-none' complete.
-Timer: 69 ticks
-Thread: 0 idle ticks, 68 kernel ticks, 1 user ticks
+Timer: 71 ticks
+Thread: 0 idle ticks, 70 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 76 reads, 214 writes
+hd0:1: 416 reads, 211 writes
 hd1:0: 103 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 972 characters output
+Console: 983 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

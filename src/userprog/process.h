@@ -16,6 +16,7 @@ struct file_info{
 	struct list_elem elem;   /* List element. */
 	int opener;            /* process which open the file*/ 
 	int deny_flag;            /* deny_flag */
+	struct semaphore file_sema;
 };
 
 struct list openfile_list;

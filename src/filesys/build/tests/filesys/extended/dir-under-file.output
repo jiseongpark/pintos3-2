@@ -1,7 +1,7 @@
-Copying tests/filesys/extended/dir-under-file into /tmp/7yMATcRv4m.dsk...
-Copying tests/filesys/extended/tar into /tmp/7yMATcRv4m.dsk...
-Writing command line to /tmp/zNeNkfkbXp.dsk...
-qemu -hda /tmp/zNeNkfkbXp.dsk -hdb tmp.dsk -hdc /tmp/7yMATcRv4m.dsk -hdd /tmp/uYSl6_Gyi2.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-under-file into /tmp/E1Ruf6anar.dsk...
+Copying tests/filesys/extended/tar into /tmp/E1Ruf6anar.dsk...
+Writing command line to /tmp/MPmUAvigZC.dsk...
+qemu -hda /tmp/MPmUAvigZC.dsk -hdb tmp.dsk -hdc /tmp/E1Ruf6anar.dsk -hdd /tmp/5y_SkVcBUd.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-under-file put tar run dir-under-file
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -12,6 +12,7 @@ hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 225 sector (112 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'dir-under-file' into the file system...
@@ -23,13 +24,13 @@ Executing 'dir-under-file':
 (dir-under-file) mkdir "abc" (must return false): FAILED
 dir-under-file: exit(1)
 Execution of 'dir-under-file' complete.
-Timer: 68 ticks
-Thread: 0 idle ticks, 67 kernel ticks, 1 user ticks
+Timer: 80 ticks
+Thread: 0 idle ticks, 78 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 127 reads, 464 writes
+hd0:1: 838 reads, 459 writes
 hd1:0: 225 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1118 characters output
+Console: 1128 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

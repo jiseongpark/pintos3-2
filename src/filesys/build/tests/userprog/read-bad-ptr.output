@@ -1,17 +1,18 @@
-Copying tests/userprog/read-bad-ptr into /tmp/DJKJWlh_j0.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/DJKJWlh_j0.dsk...
-Writing command line to /tmp/NtwdKOOtAA.dsk...
-qemu -hda /tmp/NtwdKOOtAA.dsk -hdb /tmp/kcg2Q_EW8r.dsk -hdc /tmp/DJKJWlh_j0.dsk -hdd /tmp/BymZHlGQxA.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/read-bad-ptr into /tmp/dB8co1MVe2.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/dB8co1MVe2.dsk...
+Writing command line to /tmp/w8T7DaA_nb.dsk...
+qemu -hda /tmp/w8T7DaA_nb.dsk -hdb /tmp/0ntVwqverN.dsk -hdc /tmp/dB8co1MVe2.dsk -hdd /tmp/oVr6LgKVK0.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put read-bad-ptr put sample.txt run read-bad-ptr
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  412,876,800 loops/s.
+Calibrating timer...  444,825,600 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 106 sector (53 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'read-bad-ptr' into the file system...
@@ -21,13 +22,13 @@ Executing 'read-bad-ptr':
 (read-bad-ptr) open "sample.txt"
 read-bad-ptr: exit(-1)
 Execution of 'read-bad-ptr' complete.
-Timer: 69 ticks
-Thread: 0 idle ticks, 67 kernel ticks, 2 user ticks
+Timer: 71 ticks
+Thread: 0 idle ticks, 69 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 107 reads, 222 writes
+hd0:1: 454 reads, 217 writes
 hd1:0: 106 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1015 characters output
+Console: 1025 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

@@ -1,16 +1,17 @@
-Copying tests/userprog/exit into /tmp/JWEhnZvlnP.dsk...
-Writing command line to /tmp/jLgVJ68Qf9.dsk...
-qemu -hda /tmp/jLgVJ68Qf9.dsk -hdb /tmp/Xez75E7js0.dsk -hdc /tmp/JWEhnZvlnP.dsk -hdd /tmp/R2jx9y40AS.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/exit into /tmp/l3vYXdzr4u.dsk...
+Writing command line to /tmp/VLZGKdPl4e.dsk...
+qemu -hda /tmp/VLZGKdPl4e.dsk -hdb /tmp/fPnQElh9gN.dsk -hdc /tmp/l3vYXdzr4u.dsk -hdd /tmp/Wvmz8Ck7TB.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exit run exit
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  471,040,000 loops/s.
+Calibrating timer...  419,020,800 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 103 sector (51 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'exit' into the file system...
@@ -18,13 +19,13 @@ Executing 'exit':
 (exit) begin
 exit: exit(57)
 Execution of 'exit' complete.
-Timer: 63 ticks
-Thread: 0 idle ticks, 62 kernel ticks, 1 user ticks
+Timer: 66 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 64 reads, 217 writes
+hd0:1: 506 reads, 213 writes
 hd1:0: 103 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 865 characters output
+Console: 876 characters output
 Keyboard: 0 keys pressed
 Exception: 4 page faults
 Powering off...

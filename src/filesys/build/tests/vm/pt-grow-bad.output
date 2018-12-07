@@ -1,6 +1,6 @@
-Copying tests/vm/pt-grow-bad into /tmp/m2Pp4yLt8t.dsk...
-Writing command line to /tmp/4llAngLdto.dsk...
-qemu -hda /tmp/4llAngLdto.dsk -hdb /tmp/pkS0jBpO8k.dsk -hdc /tmp/m2Pp4yLt8t.dsk -hdd /tmp/l1U54pBNMP.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/pt-grow-bad into /tmp/DYjxem4Zqb.dsk...
+Writing command line to /tmp/1bozuTkp_b.dsk...
+qemu -hda /tmp/1bozuTkp_b.dsk -hdb /tmp/RLVxd5A9Vw.dsk -hdc /tmp/DYjxem4Zqb.dsk -hdd /tmp/pSY_SuYj2I.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put pt-grow-bad run pt-grow-bad
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -11,6 +11,7 @@ hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 104 sector (52 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'pt-grow-bad' into the file system...
@@ -18,13 +19,13 @@ Executing 'pt-grow-bad':
 (pt-grow-bad) begin
 pt-grow-bad: exit(-1)
 Execution of 'pt-grow-bad' complete.
-Timer: 65 ticks
-Thread: 0 idle ticks, 64 kernel ticks, 1 user ticks
+Timer: 70 ticks
+Thread: 0 idle ticks, 69 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 76 reads, 216 writes
+hd0:1: 419 reads, 213 writes
 hd1:0: 104 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 914 characters output
+Console: 925 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

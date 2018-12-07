@@ -223,6 +223,7 @@ disk_read (struct disk *d, disk_sector_t sec_no, void *buffer)
   
   ASSERT (d != NULL);
   ASSERT (buffer != NULL);
+  // printf("sector number : %x\n", sec_no);
 
   c = d->channel;
   lock_acquire (&c->lock);
@@ -248,6 +249,7 @@ disk_write (struct disk *d, disk_sector_t sec_no, const void *buffer)
   
   ASSERT (d != NULL);
   ASSERT (buffer != NULL);
+
 
   c = d->channel;
   lock_acquire (&c->lock);
@@ -432,7 +434,7 @@ static void
 select_sector (struct disk *d, disk_sector_t sec_no) 
 {
   struct channel *c = d->channel;
-
+  // printf("SEC NO : %x\n", sec_no);
   ASSERT (sec_no < d->capacity);
   ASSERT (sec_no < (1UL << 28));
   

@@ -1,17 +1,18 @@
-Copying tests/filesys/extended/grow-seq-sm into /tmp/kBhTDVnJTu.dsk...
-Copying tests/filesys/extended/tar into /tmp/kBhTDVnJTu.dsk...
-Writing command line to /tmp/xgNmCNU1bA.dsk...
-qemu -hda /tmp/xgNmCNU1bA.dsk -hdb tmp.dsk -hdc /tmp/kBhTDVnJTu.dsk -hdd /tmp/ooGH4W31dm.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-seq-sm into /tmp/SjjUYaPi8I.dsk...
+Copying tests/filesys/extended/tar into /tmp/SjjUYaPi8I.dsk...
+Writing command line to /tmp/9c6WQQQKST.dsk...
+qemu -hda /tmp/9c6WQQQKST.dsk -hdb tmp.dsk -hdc /tmp/SjjUYaPi8I.dsk -hdd /tmp/trwwzqugT1.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-seq-sm put tar run grow-seq-sm
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  419,020,800 loops/s.
+Calibrating timer...  423,526,400 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 226 sector (113 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'grow-seq-sm' into the file system...
@@ -23,17 +24,18 @@ Executing 'grow-seq-sm':
 (grow-seq-sm) writing "testme"
 (grow-seq-sm) close "testme"
 (grow-seq-sm) open "testme" for verification
-(grow-seq-sm) size of testme (0) differs from expected (5678)
-(grow-seq-sm) read of 512 bytes at offset 0 in "testme" returned 0: FAILED
-grow-seq-sm: exit(1)
+(grow-seq-sm) verified contents of "testme"
+(grow-seq-sm) close "testme"
+(grow-seq-sm) end
+grow-seq-sm: exit(0)
 Execution of 'grow-seq-sm' complete.
-Timer: 65 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 2 user ticks
+Timer: 86 ticks
+Thread: 0 idle ticks, 83 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 137 reads, 466 writes
+hd0:1: 898 reads, 473 writes
 hd1:0: 226 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1261 characters output
+Console: 1225 characters output
 Keyboard: 0 keys pressed
 Exception: 6 page faults
 Powering off...

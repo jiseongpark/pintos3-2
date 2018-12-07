@@ -1,17 +1,18 @@
-Copying tests/filesys/extended/grow-root-lg into /tmp/ZfF0VspvMv.dsk...
-Copying tests/filesys/extended/tar into /tmp/ZfF0VspvMv.dsk...
-Writing command line to /tmp/vXx3R6qaPA.dsk...
-qemu -hda /tmp/vXx3R6qaPA.dsk -hdb tmp.dsk -hdc /tmp/ZfF0VspvMv.dsk -hdd /tmp/M4gYHBFiDg.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-root-lg into /tmp/sEbRVu1Gnz.dsk...
+Copying tests/filesys/extended/tar into /tmp/sEbRVu1Gnz.dsk...
+Writing command line to /tmp/iKuXJUpwge.dsk...
+qemu -hda /tmp/iKuXJUpwge.dsk -hdb tmp.dsk -hdc /tmp/sEbRVu1Gnz.dsk -hdd /tmp/DSyfKjmdzX.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-root-lg put tar run grow-root-lg
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  444,825,600 loops/s.
+Calibrating timer...  471,040,000 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 227 sector (113 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'grow-root-lg' into the file system...
@@ -33,16 +34,51 @@ Executing 'grow-root-lg':
 (grow-root-lg) creating and checking "file12"
 (grow-root-lg) creating and checking "file13"
 (grow-root-lg) creating and checking "file14"
-(grow-root-lg) create "file14": FAILED
-grow-root-lg: exit(1)
+(grow-root-lg) creating and checking "file15"
+(grow-root-lg) creating and checking "file16"
+(grow-root-lg) creating and checking "file17"
+(grow-root-lg) creating and checking "file18"
+(grow-root-lg) creating and checking "file19"
+(grow-root-lg) creating and checking "file20"
+(grow-root-lg) creating and checking "file21"
+(grow-root-lg) creating and checking "file22"
+(grow-root-lg) creating and checking "file23"
+(grow-root-lg) creating and checking "file24"
+(grow-root-lg) creating and checking "file25"
+(grow-root-lg) creating and checking "file26"
+(grow-root-lg) creating and checking "file27"
+(grow-root-lg) creating and checking "file28"
+(grow-root-lg) creating and checking "file29"
+(grow-root-lg) creating and checking "file30"
+(grow-root-lg) creating and checking "file31"
+(grow-root-lg) creating and checking "file32"
+(grow-root-lg) creating and checking "file33"
+(grow-root-lg) creating and checking "file34"
+(grow-root-lg) creating and checking "file35"
+(grow-root-lg) creating and checking "file36"
+(grow-root-lg) creating and checking "file37"
+(grow-root-lg) creating and checking "file38"
+(grow-root-lg) creating and checking "file39"
+(grow-root-lg) creating and checking "file40"
+(grow-root-lg) creating and checking "file41"
+(grow-root-lg) creating and checking "file42"
+(grow-root-lg) creating and checking "file43"
+(grow-root-lg) creating and checking "file44"
+(grow-root-lg) creating and checking "file45"
+(grow-root-lg) creating and checking "file46"
+(grow-root-lg) creating and checking "file47"
+(grow-root-lg) creating and checking "file48"
+(grow-root-lg) creating and checking "file49"
+(grow-root-lg) end
+grow-root-lg: exit(0)
 Execution of 'grow-root-lg' complete.
-Timer: 81 ticks
-Thread: 0 idle ticks, 71 kernel ticks, 10 user ticks
+Timer: 193 ticks
+Thread: 0 idle ticks, 134 kernel ticks, 59 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 889 reads, 553 writes
+hd0:1: 7019 reads, 605 writes
 hd1:0: 227 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1688 characters output
+Console: 3291 characters output
 Keyboard: 0 keys pressed
 Exception: 5 page faults
 Powering off...

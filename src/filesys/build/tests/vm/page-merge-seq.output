@@ -1,17 +1,18 @@
-Copying tests/vm/page-merge-seq into /tmp/mRepFH6Irb.dsk...
-Copying tests/vm/child-sort into /tmp/mRepFH6Irb.dsk...
-Writing command line to /tmp/OIuFb8ceir.dsk...
-qemu -hda /tmp/OIuFb8ceir.dsk -hdb /tmp/eyLJx_J4dG.dsk -hdc /tmp/mRepFH6Irb.dsk -hdd /tmp/MVA5z6gyZx.dsk -m 4 -net none -nographic -monitor null
+Copying tests/vm/page-merge-seq into /tmp/7tuhoZ_SK8.dsk...
+Copying tests/vm/child-sort into /tmp/7tuhoZ_SK8.dsk...
+Writing command line to /tmp/gHAxV98wcd.dsk...
+qemu -hda /tmp/gHAxV98wcd.dsk -hdb /tmp/PGkdxKAGo4.dsk -hdc /tmp/7tuhoZ_SK8.dsk -hdd /tmp/4QvRy0SCns.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put page-merge-seq put child-sort run page-merge-seq
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  444,825,600 loops/s.
+Calibrating timer...  419,020,800 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 218 sector (109 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'page-merge-seq' into the file system...
@@ -21,16 +22,49 @@ Executing 'page-merge-seq':
 (page-merge-seq) init
 (page-merge-seq) sort chunk 0
 child-sort: exit(123)
-(page-merge-seq) wait for child-sort: FAILED
-page-merge-seq: exit(1)
+(page-merge-seq) sort chunk 1
+child-sort: exit(123)
+(page-merge-seq) sort chunk 2
+child-sort: exit(123)
+(page-merge-seq) sort chunk 3
+child-sort: exit(123)
+(page-merge-seq) sort chunk 4
+child-sort: exit(123)
+(page-merge-seq) sort chunk 5
+child-sort: exit(123)
+(page-merge-seq) sort chunk 6
+child-sort: exit(123)
+(page-merge-seq) sort chunk 7
+child-sort: exit(123)
+(page-merge-seq) sort chunk 8
+child-sort: exit(123)
+(page-merge-seq) sort chunk 9
+child-sort: exit(123)
+(page-merge-seq) sort chunk 10
+child-sort: exit(123)
+(page-merge-seq) sort chunk 11
+child-sort: exit(123)
+(page-merge-seq) sort chunk 12
+child-sort: exit(123)
+(page-merge-seq) sort chunk 13
+child-sort: exit(123)
+(page-merge-seq) sort chunk 14
+child-sort: exit(123)
+(page-merge-seq) sort chunk 15
+child-sort: exit(123)
+(page-merge-seq) merge
+(page-merge-seq) verify
+(page-merge-seq) success, buf_idx=1,032,192
+(page-merge-seq) end
+page-merge-seq: exit(0)
 Execution of 'page-merge-seq' complete.
-Timer: 82 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 17 user ticks
+Timer: 351 ticks
+Thread: 15 idle ticks, 189 kernel ticks, 147 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 309 reads, 828 writes
+hd0:1: 13051 reads, 4603 writes
 hd1:0: 218 reads, 0 writes
-hd1:1: 0 reads, 0 writes
-Console: 1116 characters output
+hd1:1: 544 reads, 1688 writes
+Console: 1991 characters output
 Keyboard: 0 keys pressed
-Exception: 278 page faults
+Exception: 897 page faults
 Powering off...

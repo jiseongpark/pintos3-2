@@ -1,7 +1,7 @@
-Copying tests/filesys/base/syn-read into /tmp/TW0rkJBu9t.dsk...
-Copying tests/filesys/base/child-syn-read into /tmp/TW0rkJBu9t.dsk...
-Writing command line to /tmp/SllcP0qNkT.dsk...
-qemu -hda /tmp/SllcP0qNkT.dsk -hdb /tmp/zkWHvG5ewS.dsk -hdc /tmp/TW0rkJBu9t.dsk -hdd /tmp/oBEoRmh1hU.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/base/syn-read into /tmp/EVNPVhCZWk.dsk...
+Copying tests/filesys/base/child-syn-read into /tmp/EVNPVhCZWk.dsk...
+Writing command line to /tmp/2WmDDHjC9u.dsk...
+qemu -hda /tmp/2WmDDHjC9u.dsk -hdb /tmp/Lvk34sKROs.dsk -hdc /tmp/EVNPVhCZWk.dsk -hdd /tmp/pnzPXoHnxj.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put syn-read put child-syn-read run syn-read
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -12,6 +12,7 @@ hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 229 sector (114 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'syn-read' into the file system...
@@ -41,17 +42,17 @@ child-syn-read: exit(6)
 child-syn-read: exit(7)
 (syn-read) exec child 10 of 10: "child-syn-read 9"
 child-syn-read: exit(8)
-(syn-read) wait for child 1 of 10 returned 1 (expected 0)
-(syn-read) wait for child 1 of 10 returned 1 (expected 0): FAILED
+(syn-read) wait for child 1 of 10 returned 2 (expected 0)
+(syn-read) wait for child 1 of 10 returned 2 (expected 0): FAILED
 syn-read: exit(1)
 Execution of 'syn-read' complete.
-Timer: 190 ticks
-Thread: 75 idle ticks, 65 kernel ticks, 50 user ticks
+Timer: 231 ticks
+Thread: 74 idle ticks, 74 kernel ticks, 83 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 9825 reads, 476 writes
+hd0:1: 10799 reads, 469 writes
 hd1:0: 229 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1903 characters output
+Console: 1914 characters output
 Keyboard: 0 keys pressed
 Exception: 41 page faults
 Powering off...

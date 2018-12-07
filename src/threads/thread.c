@@ -38,6 +38,7 @@ static struct thread *initial_thread;
 
 /* Lock used by allocate_tid(). */
 static struct lock tid_lock;
+extern struct thread* read_ahead_thread;
 
 /* Stack frame for kernel_thread(). */
 struct kernel_thread_frame 
@@ -213,8 +214,15 @@ thread_create (const char *name, int priority,
   // sema_up(&t->parent->sema);
   // intr_set_level(old_level);
   /* Add to run queue. */
+
+  if(!strcmp(name, "read_ahead")){
+    printf("COME Here\n");
+    read_ahead_thread = t;
+  }
+
   thread_unblock (t);
   
+
   
   return tid;
 }

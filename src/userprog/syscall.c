@@ -277,6 +277,7 @@ int syscall_open(const char * file)
       if(!strcmp(thread_current()->exec, file)){
          new_file->deny_flag = 1;
       }
+      sema_init(&new_file->file_sema, 1);
       
       list_push_front(&openfile_list, &new_file->elem);
       // printf("list size : %d\n", list_size(&openfile_list));
@@ -359,7 +360,9 @@ int syscall_read(int fd, void *buffer, unsigned size)
          of = list_entry(e, struct file_info, elem);
          if(of->fd == fd)
          {
+            sema_down(&of->file_sema);
             ret_size = file_read(of->file, buffer, size);
+            sema_up(&of->file_sema);
             return ret_size;
          }
       }
@@ -396,9 +399,9 @@ int syscall_write(int fd, const void *buffer, unsigned size)
             if(of->deny_flag == 1){
                return 0;
             } 
-            // sema_down(&of->rw_sema);
+            sema_down(&of->file_sema);
             file_write(of->file, buffer, size);
-            // sema_up(&of->rw_sema);
+            sema_up(&of->file_sema);
             return size;
          }
       }

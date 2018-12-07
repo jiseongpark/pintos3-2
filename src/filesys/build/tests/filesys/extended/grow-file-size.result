@@ -1,2 +1,1 @@
-FAIL
-run: filesize not updated properly: should be 37, actually 0: FAILED
+PASS

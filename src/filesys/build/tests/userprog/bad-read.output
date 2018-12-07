@@ -1,16 +1,17 @@
-Copying tests/userprog/bad-read into /tmp/IOegFCVN2A.dsk...
-Writing command line to /tmp/157MPl_MBo.dsk...
-qemu -hda /tmp/157MPl_MBo.dsk -hdb /tmp/0JgxUZGa8x.dsk -hdc /tmp/IOegFCVN2A.dsk -hdd /tmp/diB6oZmbEZ.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/bad-read into /tmp/NLdPgiGgat.dsk...
+Writing command line to /tmp/059JGLq87_.dsk...
+qemu -hda /tmp/059JGLq87_.dsk -hdb /tmp/XUdX_pTPuW.dsk -hdc /tmp/NLdPgiGgat.dsk -hdd /tmp/boMYRih4xX.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put bad-read run bad-read
 0xc002f000
 Pintos booting with 4,088 kB RAM...
 368 pages available in kernel pool.
 367 pages available in user pool.
-Calibrating timer...  471,040,000 loops/s.
+Calibrating timer...  419,020,800 loops/s.
 hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 104 sector (52 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'bad-read' into the file system...
@@ -18,13 +19,13 @@ Executing 'bad-read':
 (bad-read) begin
 bad-read: exit(-1)
 Execution of 'bad-read' complete.
-Timer: 62 ticks
-Thread: 0 idle ticks, 62 kernel ticks, 0 user ticks
+Timer: 64 ticks
+Thread: 0 idle ticks, 62 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 76 reads, 216 writes
+hd0:1: 419 reads, 213 writes
 hd1:0: 104 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 893 characters output
+Console: 904 characters output
 Keyboard: 0 keys pressed
 Exception: 6 page faults
 Powering off...

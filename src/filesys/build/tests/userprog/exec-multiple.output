@@ -1,7 +1,7 @@
-Copying tests/userprog/exec-multiple into /tmp/uEtm8TwJwn.dsk...
-Copying tests/userprog/child-simple into /tmp/uEtm8TwJwn.dsk...
-Writing command line to /tmp/Me7EnnEjsJ.dsk...
-qemu -hda /tmp/Me7EnnEjsJ.dsk -hdb /tmp/RA6A8WfFhf.dsk -hdc /tmp/uEtm8TwJwn.dsk -hdd /tmp/H640g1UikW.dsk -m 4 -net none -nographic -monitor null
+Copying tests/userprog/exec-multiple into /tmp/S9Ckl7cEy9.dsk...
+Copying tests/userprog/child-simple into /tmp/S9Ckl7cEy9.dsk...
+Writing command line to /tmp/QoW9hCYFRu.dsk...
+qemu -hda /tmp/QoW9hCYFRu.dsk -hdb /tmp/8DsEZykl0r.dsk -hdc /tmp/S9Ckl7cEy9.dsk -hdd /tmp/X3bX7pjFbS.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exec-multiple put child-simple run exec-multiple
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -12,6 +12,7 @@ hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 207 sector (103 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'exec-multiple' into the file system...
@@ -29,13 +30,13 @@ child-simple: exit(81)
 (exec-multiple) end
 exec-multiple: exit(0)
 Execution of 'exec-multiple' complete.
-Timer: 67 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 4 user ticks
+Timer: 79 ticks
+Thread: 0 idle ticks, 74 kernel ticks, 5 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 315 reads, 424 writes
+hd0:1: 1096 reads, 420 writes
 hd1:0: 207 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1181 characters output
+Console: 1192 characters output
 Keyboard: 0 keys pressed
 Exception: 21 page faults
 Powering off...

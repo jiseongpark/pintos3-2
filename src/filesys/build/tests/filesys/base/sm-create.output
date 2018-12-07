@@ -1,6 +1,6 @@
-Copying tests/filesys/base/sm-create into /tmp/PEIOibmrCJ.dsk...
-Writing command line to /tmp/_MS3330i1D.dsk...
-qemu -hda /tmp/_MS3330i1D.dsk -hdb /tmp/_IaaB8xPZK.dsk -hdc /tmp/PEIOibmrCJ.dsk -hdd /tmp/luwE0lDy9G.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/base/sm-create into /tmp/NJxKfSJ5pf.dsk...
+Writing command line to /tmp/3TvIAX2GRy.dsk...
+qemu -hda /tmp/3TvIAX2GRy.dsk -hdb /tmp/25DEU7w8MC.dsk -hdc /tmp/NJxKfSJ5pf.dsk -hdd /tmp/x0p5hW_Ys9.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put sm-create run sm-create
 0xc002f000
 Pintos booting with 4,088 kB RAM...
@@ -11,6 +11,7 @@ hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 107 sector (53 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+COME Here
 Formatting file system...done.
 Boot complete.
 Putting 'sm-create' into the file system...
@@ -23,13 +24,13 @@ Executing 'sm-create':
 (sm-create) end
 sm-create: exit(0)
 Execution of 'sm-create' complete.
-Timer: 60 ticks
-Thread: 0 idle ticks, 58 kernel ticks, 2 user ticks
+Timer: 65 ticks
+Thread: 0 idle ticks, 64 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 115 reads, 238 writes
+hd0:1: 496 reads, 234 writes
 hd1:0: 107 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1060 characters output
+Console: 1070 characters output
 Keyboard: 0 keys pressed
 Exception: 6 page faults
 Powering off...
